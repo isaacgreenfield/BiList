@@ -9,15 +9,15 @@ struct BiList {
 };
 
 template< class T >
-BiList<T>* add(BiList<T>* h, const T& d);
+BiList<T>* add(BiList<T>* prev, BiList<T>* next, const T& d);
 template< class T >
-BiList<T>* insert(BiList<T>* h, const T& d);
+BiList<T>* insert(BiList<T> *ths, const T &d);
 
 template< class T >
-BiList<T>* cut(BiList<T>* h) noexcept;
+BiList<T>* cut(BiList<T>* ths) noexcept;
 template< class T >
-BiList<T>* erase(BiList<T>* h) noexcept;
+BiList<T>* erase(BiList<T>* ths) noexcept;
 template< class T >
-BiList<T>* clear(BiList<T>* h, BiList<T>* e) noexcept;
+BiList<T>* clear(BiList<T>* ths, BiList<T>* end) noexcept;
 
 #endif
