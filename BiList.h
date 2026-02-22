@@ -52,8 +52,9 @@ BiList<T> * clear(BiList<T> *ths, BiList<T> * end) noexcept {
 
 template<class T, class F>
 F traverse(F f, BiList<T>* ths, BiList<T>* end) {
-  for (; ths != end; ths = ths->next) {
-    f(ths->next);
+  BiList<T>* curr = ths;
+  for (; curr != end; curr = curr->next) {
+    f(curr->val);
   }
   return f;
 }
