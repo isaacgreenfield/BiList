@@ -31,3 +31,11 @@ BiList<T> * clear(BiList<T> *ths, BiList<T> * end) noexcept {
   return ths;
 }
 
+template<class T, class F>
+F traverse(F f, BiList<T> ths, BiList<T> end) {
+  for (; ths != end; ths = ths->next) {
+    f(ths->next);
+  }
+  return f;
+}
+
