@@ -14,13 +14,12 @@ int main() {
   }
 
   BiList<int>* tail = ths;
-  BiList<int>* tmp = nullptr;
   sum s;
   proizved p;
-  s = traverse(s, head->next, tmp);
-  p = traverse(p, head->next, tmp);
+  s = traverse(s, head->next, tail->next);
+  p = traverse(p, head->next, tail->next);
 
   std::cout << s.result << " " << p.result << "\n";
-  head = clear(head, tmp);
+  head = clear(head, tail->next);
   return 0;
 }
